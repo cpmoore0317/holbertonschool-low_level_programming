@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    prinf("holbertonschool-low_level_programming\n");	
+    printf("holbertonschool-low_level_programming\n");	
     return (0);
 }
