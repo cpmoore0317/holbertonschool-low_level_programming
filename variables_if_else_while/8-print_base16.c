@@ -9,16 +9,17 @@
 
 int main(void)
 {
-	char n = 1;
-	char l = 'a';
+	int n;
+	char l;
 
-	do {
+	for (n = 48 ; n < 58 ; n++)
+	{
 		putchar(n);
-		n++;
+	}
+	for (l = 'a' ; l <= 'f' ; l++)
+	{
 		putchar(l);
-		l++;
-	} while (n <= 9);
-	(l <= 'f');
+	}
 	putchar('\n');
 	return (0);
 }
