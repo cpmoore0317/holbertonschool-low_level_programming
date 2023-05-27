@@ -9,17 +9,17 @@
 
 int main(void)
 {
-	int n;
-	char l;
+	int n = 48;
+	char l = 'a';
 
-	for (n = 48 ; n < 58 ; n++)
-	{
+	do {
 		putchar(n);
-	}
-	for (l = 'a' ; l <= 'f' ; l++)
-	{
+		n++;
+	} while (n <= 58);
+	do {
 		putchar(l);
-	}
+		l++;
+	} while (l <= 'f');
 	putchar('\n');
 	return (0);
 }
