@@ -12,7 +12,7 @@ int x;
 
 char a[] = "_putchar";
 
-	for (x = 0 ; x < 9 ; x++)
+	for (x = 0 ; x < 8 ; x++)
 	{
 	putchar(a[x]);
 	}
