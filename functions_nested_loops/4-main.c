@@ -8,6 +8,7 @@
 int main(void)
 {
 	int r;
+	int _putchar(char);
 
 	r = _isalpha('H');
 	_putchar(r + '0');
