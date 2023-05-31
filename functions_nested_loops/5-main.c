@@ -8,6 +8,7 @@
 int main(void)
 {
 	int r;
+	int _putchar(char);
 
 	r = print_sign(98);
 	_putchar(',');
