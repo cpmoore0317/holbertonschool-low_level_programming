@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "function_pointers.h"
+#include "main.h"
 
 /**
  * int_index - Looks fora given integer
