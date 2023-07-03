@@ -11,28 +11,35 @@
  * Return: Returns the new dog
  */
 
-dog_t *new_dog(char *name, float age, char *owner) {
-	dog_t *dog = malloc(sizeof(dog_t));
-	if (dog == NULL)
-	{
-		return NULL;
-	}
-	
-	dog->name = strdup(name);
-	if (dog->name == NULL)
-	{
-		free(dog);
-		return NULL;
-	}
+dog_t *new_dog(char *name, float age, char *owner)
+{
+	int l1 = 0;
+	int l2 = 0;
+	int i;
+	char *n2;
+	char *o2;
+	dog_t *tdog;
 
-	dog->age = age;
-	dog->owner = strdup(owner);
-	if (dog->owner == NULL)
+	for (i = 0; name[i]; i++)
+		l1++;
+	for (i = 0; owner[i]; i++)
+		l2++;
+	n2 = malloc((l1 + 1) * sizeof(char));
+	o2 = malloc((l2 + 1) * sizeof(char));
+	tdog = malloc(sizeof(dog_t));
+	if ((tdog == NULL) || (o2 == NULL) || (n2 == NULL))
 	{
-		free(dog->name);
-		free(dog);
-		return NULL;
+		free(o2);
+		free(n2);
+		free(tdog);
+		return (NULL);
 	}
-
-	return dog;
+	for (i = 0; i <= l1; i++)
+		n2[i] = name[i];
+	for (i = 0; i <= l2; i++)
+		o2[i] = owner[i];
+	tdog->name = n2;
+	tdog->age = age;
+	tdog->owner = o2;
+	return (tdog);
 }
