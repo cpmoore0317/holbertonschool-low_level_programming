@@ -1,7 +1,6 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
-#include <stdlib.h>
 
 /**
  * print_strings - Prints strings, followed by a new line
@@ -10,7 +9,7 @@
  * Return: Void 
  */
 
-void prints_strings(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	char *sep, *ptr;
 	unsigned int i;
