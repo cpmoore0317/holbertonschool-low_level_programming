@@ -13,7 +13,7 @@
 typedef struct dog
 {
 char *name;
-float age;
+int age;
 char *owner;
 } dog_t;
 
