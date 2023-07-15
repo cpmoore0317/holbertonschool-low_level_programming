@@ -10,3 +10,36 @@
  *
  * Return: new node address if success, NULL otherwise
  */
+void insert_nodeint_at_index(listint_t **head, unsigned int index, int data)
+{
+	listint_t *new_node;
+	listint_t *current;
+	unsigned int i;
+
+	new_node = malloc(sizeof(listint_t));
+	if (new_node == NULL)
+		return;
+
+	new_node->n = data;
+	new_node->next = NULL;
+
+	if (index == 0)
+	{
+		new_node->next = *head;
+		*head = new_node;
+		return;
+	}
+
+	current = *head;
+
+	for (i = 0; i < index - 1; i++)
+	{
+		if (current == NULL)
+			return;
+		current = current->next
+	}
+
+	new_node->next = current->next;
+	currrent->next = new_node;
+}
+
