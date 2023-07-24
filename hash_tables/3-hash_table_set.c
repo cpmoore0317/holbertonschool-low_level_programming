@@ -13,15 +13,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	index = key_index((unsigned char *)key, ht->size);
 	node = ht->array[index];
+
 	while (node)
 	{
-	    if (strcmp(node->key, key) == 0)
-	    {
-		    /* Key already exists, update the value */
-		    free(node->value);
-		    node->value = strdup(value);
-		    return (1);
-	    }
+		if (strcmp(node->key, key) == 0)
+		{
+			/* Key already exists, update the value */
+			free(node->value);
+			node->value = strdup(value);
+			return (1);
+		}
 	    tmp = node;
 	    node = node->next;
 	}
