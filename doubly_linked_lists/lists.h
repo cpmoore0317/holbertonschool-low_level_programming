@@ -1,6 +1,13 @@
 #ifndef LISTS_H
 #define LISTS_H
 
+#include <stdarg.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <limits.h>
+
 /**
  * struct dlistint_s - doubly linked list
  * @n: integer
