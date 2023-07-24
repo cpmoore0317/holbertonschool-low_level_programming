@@ -1,5 +1,24 @@
 #include "lists.h"
 /**
+ * dlistint_len - counts number of nodes
+ * @h: head of node
+ * Return: number of nodes
+ */
+unsigned int dlistint_len(dlistint_t *head)
+{
+	unsigned int count = 0;
+	dlistint_t *current = head;
+
+	while (current != NULL)
+	{
+		count++;
+		current = current->next;
+	}
+
+	return (count);
+}
+
+/**
  * get_dnodeint_at_index - get the node of a linked list
  * @head: the head of the list
  * @index: index
